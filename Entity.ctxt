@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=Entity
+comment0.text=\r\n\ "Entity"\ is\ a\ class\ of\ the\ "World\ of\ Zuul\:The\ Lesser\ Evil"\ game.\r\n\ \r\n\ It\ represents\ a\ character,\ or\ a\ person,in\ the\ world\ of\ the\ game.\r\n\r\n\r\n\ @author\ Anton\ Luca-Dorin\r\n\ @version\ 2017.12.09\r\n
+comment1.params=canMove\ currentRoom\ name
+comment1.target=Entity(boolean,\ Room,\ java.lang.String)
+comment1.text=\r\n\ Create\ an\ Entity\r\n\ @param\ canMove\ if\ the\ Entity\ has\ the\ ability\ to\ move\ around\r\n\ @param\ currentRoom\ the\ room\ in\ which\ the\ Entity\ currently\ is\r\n\ @param\ name\ the\ name\ of\ the\ Entity\r\n
+comment2.params=room
+comment2.target=void\ addRoom(Room)
+comment2.text=\r\n\ @param\ add\ a\ room\ to\ the\ Entity's\ list\ of\ rooms\ between\ which\ it\ can\ move\r\n
+comment3.params=
+comment3.target=void\ move()
+comment3.text=\r\n\ Try\ to\ move\ the\ Entity.\r\n\ If\ the\ Entity\ can\ Move,\ try\ 3\ times\ to\ randomly\ get\ an\ Exit\r\n\ thorugh\ which\ it\ can\ pass.\ If\ it\ fails,\ it\ stays\ put.\r\n
+comment4.params=
+comment4.target=Room\ getCurrentRoom()
+comment5.params=
+comment5.target=java.lang.String\ getName()
+numComments=6

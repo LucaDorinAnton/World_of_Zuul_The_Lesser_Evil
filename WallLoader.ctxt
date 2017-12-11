@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=WallLoader
+comment0.text=\r\n\ "WallLoader"\ is\ a\ part\ of\ the\ "World\ of\ Zuul\:\ The\ Lesser\ Evil"\ game.\r\n\r\nIt's\ purpose\ is\ to\ load\ the\ basic\ layout\ of\ the\ level\ tot\ the\ GamePlay\ objects.\r\nIt\ has\ 5\ choices\ of\ levels\ for\ the\ GamePlay\ objects.\r\n\r\n\ @author\ Anton\ Luca-Dorin\r\n\ @version\ 2017.12.08\r\n
+comment1.params=
+comment1.target=WallLoader()
+comment1.text=\r\n\ Create\ a\ new\ WallLoader\ object\r\n
+comment2.params=displaySize\ value
+comment2.target=int[][]\ getWalls(int,\ int)
+comment2.text=\r\n\ Based\ on\ the\ provided\ index,\ return\ a\ level\ layout\ as\ a\ bi-dimensional\ Array.\r\n\ The\ 1's\ represent\ Wall\ Blocks\ and\ the\ 0's\ represent\ FLoor\ Tiles.\r\n\ @param\ index\ the\ index\ with\ which\ we\ choose\ our\ layout\r\n\ @return\ display\ the\ bi-dimensional\ representing\ the\ layout\ we\ chose\r\n
+numComments=3

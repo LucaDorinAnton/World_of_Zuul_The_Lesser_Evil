@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=HpBoostItem
+comment0.text=\r\n\ "HpBoostItem"\ is\ a\ subclass\ of\ the\ "Item"\ class\ and\r\n\ a\ part\ of\ the\ "World\ of\ Zuul\:\ The\ Lesser\ Evil"\ game\r\n\ \r\n\ It\ models\ an\ Item\ like\ food\ or\ first\ aid\r\n\ which\ can\ replenish\ your\ HP\r\n\ \r\n\ @author\ Anton\ Luca-Dorin\r\n\ @version\ 2017.12.09\r\n
+comment1.params=name\ desc\ movable\ weight\ value
+comment1.target=HpBoostItem(java.lang.String,\ java.lang.String,\ boolean,\ int,\ int)
+comment1.text=\r\n\ Create\ a\ HpBoostItem\r\n\ @param\ name\ the\ name\ of\ the\ HpBoostItem\r\n\ @param\ desc\ the\ description\ of\ the\ HpBoostItem\r\n\ @param\ movable\ if\ the\ HpBoostItem\ can\ be\ moved\ or\ not\r\n\ @param\ weight\ the\ weight\ of\ the\ HpBoostItem\r\n\ @param\ value\ how\ many\ Hit\ Points\ the\ HpBoostItem\ restores\r\n
+comment2.params=
+comment2.target=int\ getHpBoost()
+comment2.text=\r\n\ Override\ the\ stub\ method\ of\ the\ parent\ class.\r\n\ @return\ hpBoost\ the\ Hit\ Points\ this\ HpBoostItem\ restores\r\n
+numComments=3

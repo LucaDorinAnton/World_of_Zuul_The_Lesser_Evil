@@ -1,0 +1,127 @@
+import javax.swing.*;
+import java.awt.GridLayout;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import javax.imageio.ImageIO;
+import java.io.IOException;
+import java.awt.Toolkit;
+import java.awt.Dimension;
+
+/**
+ * Write a description of class GamePlay here.
+ *
+ * @author (your name)
+ * @version (a version number or a date)
+ */
+public class GamePlayGUI extends JFrame
+{
+    private BufferedImage[] images;
+    private int[][] display;
+    private JPanel leftPanel;
+    private JPanel rightPanel;
+    private JLabel playerLabel;
+    private JLabel healthLabel;
+    private JLabel enemiesLabel;
+    private JLabel shellsLabel;
+    private JLabel controlsLabel;
+    private JLabel moveLabel;
+    private JLabel attackLabel;
+    private JLabel dashLabel;
+    private JLabel dashRechargeLabel;
+    private JProgressBar dashRechargeBar;
+    private JLabel extraText;
+    
+    public GamePlayGUI(int size, GamePlay gamePlay) {
+        display = new int[size][size];
+        images = new BufferedImage[5];
+        
+        
+    }
+    
+    private void loadWalls() {
+        display = new int[][]{
+           { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },
+           { 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1 },
+           { 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1 },
+           { 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1 },
+           { 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1 },
+           { 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1 },
+           { 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1 },
+           { 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1 },
+           { 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1 },
+           { 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1 },
+           { 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1 },
+           { 1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1 },
+           { 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1 },
+           { 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1 },
+           { 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1 },
+           { 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1 },
+           { 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1 },
+           { 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 1 },
+           { 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1 },
+           { 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1 },
+           { 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1 },
+           { 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1 },
+           { 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1 },
+           { 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1 },
+           { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 } 
+        };
+    }
+    
+    private void setupGUI() {
+        Dimension screen = Toolkit.getDefaultToolkit().getScreenSize();
+        this.setSize(700, 450);
+        int xPos = screen.width/2 - this.getWidth()/2;
+        int yPos = screen.height/2 - this.getHeight()/2;
+        this.setLocation(xPos, yPos);
+        this.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
+        this.setTitle("World of Zuul: The Lesser Evil");
+        this.setResizable(false);
+        
+        MyKeyListener myKeyL = new MyKeyListener();
+        myKeyL.setGUI(this);
+        myKeyL.addKeyListener(myKeyL);
+        myKeyL.setFocusable(true);
+        JPanel mainPanel = new JPanel();
+        leftPanel = new JPanel();
+        rightPanel = new JPanel();
+        rightPanel.setLayout(new BoxLayout(rightPanel, BoxLayout.Y_AXIS));
+        
+        leftPanel.setSize(400, 400);
+        leftPanel.setLayout(new GridLayout(25,25));
+
+        
+        playerLabel = new JLabel("Player1");
+        healthLabel = new JLabel("Health: " + playerHealth + "%");
+        enemiesLabel = new JLabel("Enemies left: " + enemies.size());
+        shellsLabel = new JLabel("Shotgun Shells: ");
+        controlsLabel = new JLabel("Controls:");
+        moveLabel = new JLabel("Move with: WASD");
+        attackLabel = new JLabel("Your attack is Dash: Shift + WASD");
+        dashLabel = new JLabel("Shoot a Shotgun Shell: Alt + WASD");
+        dashRechargeLabel = new JLabel("Dash Recharge: ");
+        dashRechargeBar = new JProgressBar(0, 100);
+        dashRechargeBar.setValue(100);
+        dashRechargeBar.setString("Dash Ready!");
+        dashRechargeBar.setStringPainted(true);
+        extraText = new JLabel("");
+        
+        rightPanel.add(playerLabel);
+        rightPanel.add(healthLabel);
+        rightPanel.add(enemiesLabel);
+        rightPanel.add(shellsLabel);
+        rightPanel.add(controlsLabel);
+        rightPanel.add(moveLabel);
+        rightPanel.add(attackLabel);
+        rightPanel.add(dashLabel);
+        rightPanel.add(dashRechargeLabel);
+        rightPanel.add(dashRechargeBar);
+        rightPanel.add(extraText);
+        
+        mainPanel.add(leftPanel);
+        mainPanel.add(rightPanel);
+        myKeyL.add(mainPanel);
+        this.add(myKeyL);
+        updateDisplay();
+    }
+}

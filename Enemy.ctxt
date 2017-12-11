@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=Enemy
+comment0.text=\r\n\ "Enemy"\ is\ a\ part\ of\ the\ "world\ of\ Zuul\:\ A\ lesser\ Evil"\ game.\r\n\ \r\nAn\ Enemy\ is\ a\ point\ on\ the\ grid\ of\ a\ GamePlay\ object.\r\n\r\n\ @author\ Anton\ Luca-Dorin\r\n\ @version\ 2017.12.08\r\n
+comment1.params=x\ y
+comment1.target=Enemy(int,\ int)
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Enemy\r\n\ @param\ x\ the\ x\ value\ of\ the\ Enemy\r\n\ @param\ y\ the\ y\ value\ of\ the\ Enemy\r\n
+comment2.params=x\ y
+comment2.target=void\ setXY(int,\ int)
+comment2.text=\r\n\ @param\ x\ the\ new\ X\ value\ of\ the\ Enemy\r\n\ @param\ y\ the\ new\ Y\ value\ of\ the\ Enemy\r\n
+comment3.params=
+comment3.target=int\ getX()
+comment3.text=\r\n\ @return\ x\ the\ x\ value\ of\ the\ Enemy\r\n
+comment4.params=
+comment4.target=int\ getY()
+comment4.text=\r\n\ @return\ y\ the\ y\ value\ of\ the\ Enemy\r\n
+numComments=5

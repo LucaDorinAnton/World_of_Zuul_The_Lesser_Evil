@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=Node
+comment0.text=\r\n\ "Node"\ is\ a\ part\ of\ the\ "World\ of\ Zuul\:\ The\ Lesser\ Evil"\ game.\r\n\r\nIt\ represents\ a\ tool\ for\ calculating\ the\ path\r\nbetween\ an\ enemy\ and\ the\ player\ in\ the\ GamePlay\ class.\r\n\r\nIt\ stores\ a\ location\ in\ a\ bi-dimensional\ array\ and\r\nthe\ distance\ from\ the\ starting\ point\ of\ the\ calculation\r\n\r\n\ @author\ Anton\ Luca-Dorin\r\n\ @version\ 2017.12.09\r\n
+comment1.params=x\ y\ dist
+comment1.target=Node(int,\ int,\ int)
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Node\r\n\ @param\ x\ the\ x\ coordinate\ of\ the\ Node\r\n\ @param\ y\ the\ y\ coordinate\ of\ the\ Node\r\n\ @param\ dist\ the\ distance\ of\ the\ Node\ from\ the\ starting\ point\ of\ the\ calculation\ expressed\ in\ steps\r\n
+comment2.params=x\ y
+comment2.target=void\ setXY(int,\ int)
+comment2.text=\r\n\ Give\ this\ Node\ new\ coordinates\r\n\ @param\ x\ the\ new\ x\ coordinate\r\n\ @param\ y\ the\ new\ y\ coordinate\r\n
+comment3.params=
+comment3.target=int\ getX()
+comment3.text=\r\n\ @return\ the\ x\ value\ of\ this\ Node\r\n
+comment4.params=
+comment4.target=int\ getY()
+comment4.text=\r\n\ @return\ the\ y\ value\ of\ this\ Node\r\n
+comment5.params=
+comment5.target=int\ getDist()
+comment5.text=\r\n\ @return\ the\ distance\ of\ this\ Node\ from\ the\ start\ point\ of\ the\ calculation\r\n
+comment6.params=newDist
+comment6.target=void\ setDist(int)
+comment6.text=\r\n\ @param\ the\ new\ distance\ of\ the\ Node\ from\ the\ starting\ point\ of\ the\ calculation\r\n
+numComments=7

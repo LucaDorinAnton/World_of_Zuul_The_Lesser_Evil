@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Teleporter
+comment0.text=\r\n\ "Teleporter"\ is\ a\ subclass\ of\ the\ "Item"\ class\ and\ a\ part\r\n\ of\ the\ "World\ of\ Zuul\:\ The\ Lesser\ Evil"\ game\r\n\ \r\n\ Teleporter\ -\ an\ Item\ which\ allows\ the\ player's\ current\ room\r\n\ to\ be\ alterted\r\n\r\n\ @author\ Anton\ Luca-Dorin\r\n\ @version\ 2017.12.08\r\n
+comment1.params=name\ desc\ movable
+comment1.target=Teleporter(java.lang.String,\ java.lang.String,\ boolean)
+comment1.text=\r\n\ Create\ a\ teleporter.\ A\ teleporter\ weighs\ alot,\r\n\ so\ it\ can't\ be\ moved.\r\n\ @param\ name\ the\ teleporter's\ name\r\n\ @param\ desc\ the\ teleporter's\ description\r\n\ @param\ movable\ if\ the\ teleporter\ can\ be\ moved\ or\ not\r\n
+comment2.params=room
+comment2.target=void\ addToRooms(Room)
+comment2.text=\r\n\ Override\ the\ stub\ method\ of\ the\ parent\ class.\r\n\ Add\ a\ room\ to\ the\ teleporters\ list\ of\ rooms\r\n\ to\ which\ the\ player\ will\ be\ able\ to\ teleport\r\n\ \r\n\ @param\ room\ the\ room\ to\ add\ to\ the\ list\r\n
+comment3.params=
+comment3.target=Room\ getARoom()
+comment3.text=\r\n\ Override\ the\ stub\ method\ of\ the\ parent\ class\r\n\ Give\ a\ room\ to\ which\ the\ player\ can\ teleport\ to.\r\n\ @return\ room\ a\ room\ to\ which\ the\ player\ can\ teleport\r\n
+numComments=4

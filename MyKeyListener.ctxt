@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=MyKeyListener
+comment0.text=\r\n\ "MyKeyListener"\ is\ part\ of\ the\ "World\ of\ Zuul\:\ The\ Lesser\ Evil"\ game.\r\n\ \r\n\ The\ MyKeyListener\ servers\ 2\ purposes\:\r\n\ it\ stores\ all\ the\ contents\ of\ a\ GamePlayGUI\ object\ and\r\n\ it\ transmits\ key\ press\ events\ to\ the\ GamePlay\ object\r\n\ \r\n\ It\ uses\ an\ implementation\ of\ the\ interafce\ KeyListener\ to\ accomplish\ this\ last\ purpose\r\n\r\n\ @author\ Anton\ Luca-Dorin\r\n\ @version\ 2017.12.07\r\n
+comment1.params=gamePlay
+comment1.target=void\ setGamePlay(GamePlay)
+comment1.text=\r\n\ @param\ gamePlay\ the\ gamePlay\ Object\ assigne\ to\ this\ KeyListener\r\n
+comment2.params=e
+comment2.target=void\ keyTyped(java.awt.event.KeyEvent)
+comment2.text=\r\n\ \ This\ methods\ triggers\ when\ the\ user\ types\ a\ key\ on\ his\ keyboard\r\n\ \ @param\ e\ the\ KeyEvent\ which\ was\ triggered\r\n
+comment3.params=e
+comment3.target=void\ keyPressed(java.awt.event.KeyEvent)
+comment3.text=\r\n\ This\ method\ triggers\ whenever\ the\ user\ presses\ a\ key\ on\ his\ keyboard\r\n\ @param\ e\ the\ KeyEvent\ which\ was\ triggered\r\n
+comment4.params=e
+comment4.target=void\ keyReleased(java.awt.event.KeyEvent)
+comment4.text=\r\n\ This\ method\ triggers\ whenever\ the\ user\ releases\ a\ key\ on\ his\ keyboard\r\n\ @param\ e\ the\ KeyEvent\ which\ was\ triggered\r\n
+numComments=5

@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=MaxHpBoostItem
+comment0.text=\r\n\ "MaxHpBoostItem"\ is\ a\ subclass\ of\ "Item"\ and\ a\ part\r\n\ of\ the\ "World\ of\ Zuul\:\ A\ lesser\ Evil"\ game\r\n\ \r\n\ It\ models\ an\ itam\ which\ can\ increase\ the\ player's\r\n\ maxiumum\ hit\ points,\ like\ a\ clothing\ item.\r\n\ \r\n\ @author\ Anton\ Luca-Dorin\r\n\ @version\ 2017.12.09\r\n
+comment1.params=name\ desc\ movable\ weight\ value
+comment1.target=MaxHpBoostItem(java.lang.String,\ java.lang.String,\ boolean,\ int,\ int)
+comment1.text=\r\n\ Create\ a\ MaxHpBoostItem\r\n\ @param\ name\ the\ name\ of\ the\ MaxHpBoostItem\r\n\ @param\ desc\ the\ description\ of\ the\ MaxHpBoostItem\r\n\ @param\ movable\ if\ the\ MaxHpBoostItem\ can\ be\ moved\ or\ not\r\n\ @param\ weight\ the\ weight\ of\ the\ MaxHpBoostItem\r\n\ @param\ value\ how\ many\ Hit\ Points\ the\ MaxHpBoostItem\ adds\ to\ the\ maxiumum\ amount\ of\ HP\ of\ the\ player\r\n
+comment2.params=
+comment2.target=int\ getMaxHpBoost()
+comment2.text=\r\n\ Override\ the\ stub\ method\ of\ the\ parent\ class.\r\n\ @return\ maxHpBoost\ the\ Hit\ Points\ this\ MaxHpBoostItem\ adds\ to\ the\ maxiumum\ amount\ of\ HP\ of\ the\ player\r\n
+numComments=3
